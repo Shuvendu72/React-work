@@ -1,0 +1,22 @@
+.Person {
+    width: 60%;
+    margin: 15px auto;
+    border: 1px solid wheat;
+    box-shadow: 0 2px 3px wheat;
+    padding: 16px;
+    text-align: center;
+    background-color: rgb(204, 204, 170);
+}
+.Person > input {
+    text-align: center;
+    border: 1px solid blueviolet;
+    color: brown;
+    background-color: rgb(204, 204, 170);
+    box-shadow: 0 2px 3px chartreuse;
+
+}
+@media (min-width: 500px) {
+    .Person {
+        width: 450px;
+    }
+}
