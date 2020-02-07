@@ -1,4 +1,3 @@
-//  import React from 'react';
 import React, { useEffect, useRef, useContext } from 'react';
 import classes from './Cockpit.module.css';
 import AuthContext from '../../context/auth-context';
@@ -13,14 +12,8 @@ const Cockpit = (props) => {
 
   useEffect(() => {
     console.log('[Cockpit.js] useEffect');
-    //HTTP request...
-    //  setTimeout(() => {
-    //   alert ('Saved data to cloud!');
-    // }, 1000);
-
     toggleBtnRef.current.click();
     return () => {
-      //clearTimeout(timer);
       console.log('[Cockpit.js] cleanup work in useEffect');
     };
   }, []);
@@ -38,7 +31,6 @@ const Cockpit = (props) => {
     btnClass = classes.Red;
   }
 
-  // if (props.persons.length <=2) {
   if (props.personsLength <= 2) {
     assignedClasses.push(classes.red); // classes= {'red'}
   }
@@ -56,15 +48,10 @@ const Cockpit = (props) => {
         className={btnClass}
         onClick={props.clicked}>Toggle Persons
       </button>
-      {/* <AuthContext.Consumer> */}
-        {/* {(context) =>  */}
         <button 
           onClick={authContext.login}
-          // {context.login}
           >LogIn
         </button>
-      {/* </AuthContext.Consumer> */}
-
     </div>
   );
 };
